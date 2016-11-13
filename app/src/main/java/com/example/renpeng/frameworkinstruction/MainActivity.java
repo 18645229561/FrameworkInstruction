@@ -1,7 +1,10 @@
 package com.example.renpeng.frameworkinstruction;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,10 +17,25 @@ public class MainActivity extends AppCompatActivity {
      * WindowManagerImp.LayoutParams[]
      * */
 
+    private Dialog dialog;
+    private Toast toast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        dialog = new Dialog(this);
+
+        //当Dialog显示时的监听
+        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialog) {
+
+            }
+        });
+
+
+
     }
 
     /**
